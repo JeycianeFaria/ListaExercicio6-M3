@@ -1,6 +1,6 @@
 package br.com.zup;
 
-public class Pessoas {
+public class Pessoa {
 
     //Atributos
     private String nome;
@@ -9,10 +9,10 @@ public class Pessoas {
 
 
     //construtor
-    public Pessoas() {
+    public Pessoa() {
     }
 
-    public Pessoas(String nome, String cpf, String telefone) {
+    public Pessoa(String nome, String cpf, String telefone) {
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
