@@ -55,4 +55,20 @@ public class Imovel {
         this.funcionarioResponsavel = funcionarioResponsavel;
     }
 
+
+    //Métodos
+    //Acionar morador a lista
+    public void adicionarMorador(Morador morador){
+        listaMoradores.add(morador);
+    }
+
+
+    //exibir lista de moradores
+    public void listaMoradores(){
+        for (Morador referencia: listaMoradores){
+            System.out.println("Moradores: " + referencia.getNome());
+        }
+    }
+
+
 }

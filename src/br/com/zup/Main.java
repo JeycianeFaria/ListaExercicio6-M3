@@ -11,7 +11,9 @@ public class Main {
 
 
         //Teste imovel
-
+        imovel1.listaMoradores();
+        imovel1.adicionarMorador(morador1);
+        imovel1.listaMoradores();
 
     }
 }
