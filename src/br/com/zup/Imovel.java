@@ -66,9 +66,8 @@ public class Imovel {
     //exibir lista de moradores
     public void listaMoradores(){
         for (Morador referencia: listaMoradores){
-            System.out.println("Moradores: " + referencia.getNome());
+            System.out.println("Moradores: " + referencia);
         }
     }
-
 
 }

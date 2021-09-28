@@ -10,10 +10,13 @@ public class Main {
         Imovel imovel1 = new Imovel("Rua X, 111",700);
 
 
-        //Teste imovel
+        //Teste imovel adicionar moradores a lista
         imovel1.listaMoradores();
         imovel1.adicionarMorador(morador1);
         imovel1.listaMoradores();
 
+        //Teste imóvel adicionar funcionário resposável.
+        imovel1.setFuncionarioResponsavel(funcionario1);
+        System.out.println(imovel1.getFuncionarioResponsavel());
     }
 }

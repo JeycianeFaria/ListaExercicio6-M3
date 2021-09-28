@@ -16,7 +16,6 @@ public class Morador extends Pessoa{
     }
 
     //getters e setters
-
     public int getIdade() {
         return idade;
     }
@@ -25,4 +24,12 @@ public class Morador extends Pessoa{
         this.idade = idade;
     }
 
+
+    @Override
+    public String toString() {
+      StringBuilder retorno = new StringBuilder();
+      retorno.append("Nome: " + getNome());
+      retorno.append(", " + getIdade() + " anos.\n");
+      return retorno.toString();
+    }
 }
