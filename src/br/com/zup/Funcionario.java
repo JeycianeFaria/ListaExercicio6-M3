@@ -1,9 +1,10 @@
 package br.com.zup;
 
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa {
 
     //Atributos
     private double salario;
+
 
     //construtor
     public Funcionario() {
@@ -25,11 +26,14 @@ public class Funcionario extends Pessoa{
     }
 
 
+    //Métodos
+    //Exibir dados do funcionário
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Funcionário: " + getNome());
+        retorno.append("Funcionário " + getNome());
         retorno.append("\tTelefone: " + getTelefone());
         return retorno.toString();
     }
+
 }

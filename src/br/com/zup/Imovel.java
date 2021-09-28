@@ -6,29 +6,31 @@ import java.util.List;
 public class Imovel {
 
     //Atributos
-    private List<Morador> listaMoradores = new ArrayList<>();
+    private String nomeImovel;
     private String enderecoImovel;
     private double valorAluguel;
     private Funcionario funcionarioResponsavel;
+    private List<Morador> listaMoradores = new ArrayList<>();
 
 
     //construtor
     public Imovel() {
     }
 
-    public Imovel(String enderecoImovel, double valorAluguel) {
+    public Imovel(String nomeImovel, String enderecoImovel, double valorAluguel) {
+        this.nomeImovel = nomeImovel;
         this.enderecoImovel = enderecoImovel;
         this.valorAluguel = valorAluguel;
     }
 
 
     //Getters e Setters
-    public List<Morador> getListaMoradores() {
-        return listaMoradores;
+    public String getNomeImovel() {
+        return nomeImovel;
     }
 
-    public void setListaMoradores(List<Morador> listaMoradores) {
-        this.listaMoradores = listaMoradores;
+    public void setNomeImovel(String nomeImovel) {
+        this.nomeImovel = nomeImovel;
     }
 
     public String getEnderecoImovel() {
@@ -55,19 +57,38 @@ public class Imovel {
         this.funcionarioResponsavel = funcionarioResponsavel;
     }
 
+    public List<Morador> getListaMoradores() {
+        return listaMoradores;
+    }
 
-    //Métodos
-    //Acionar morador a lista
-    public void adicionarMorador(Morador morador){
-        listaMoradores.add(morador);
+    public void setListaMoradores(List<Morador> listaMoradores) {
+        this.listaMoradores = listaMoradores;
     }
 
 
+    //Métodos
+    //Acionar morador a lista
+    public void adicionarMorador(Morador morador) {
+        listaMoradores.add(morador);
+    }
+
     //exibir lista de moradores
-    public void listaMoradores(){
-        for (Morador referencia: listaMoradores){
-            System.out.println("Moradores: " + referencia);
+    public void listaMoradores() {
+        for (Morador referencia : listaMoradores) {
+            System.out.println(referencia);
         }
+    }
+
+    //Exibir dados do imovél
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Imovel: " + getNomeImovel());
+        retorno.append("\nEndereço: " + getEnderecoImovel() + ".");
+        retorno.append("\nValor Aluguel: R$ " + getValorAluguel());
+        retorno.append("\nResponsável: " + getFuncionarioResponsavel());
+        retorno.append("\nMoradores: " + listaMoradores);
+        return retorno.toString();
     }
 
 }
