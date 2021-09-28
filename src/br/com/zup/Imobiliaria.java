@@ -33,15 +33,30 @@ public class Imobiliaria {
         return catalogoImoveis;
     }
 
-    public void setCatalogoImoveis(List<Imovel> catalogoImoveis) {
-        this.catalogoImoveis = catalogoImoveis;
-    }
-
     public List<Funcionario> getListaFuncionarios() {
         return listaFuncionarios;
     }
 
-    public void setListaFuncionarios(List<Funcionario> listaFuncionarios) {
-        this.listaFuncionarios = listaFuncionarios;
+
+    //Métodos
+    //Adicionar Imoveis
+    public void adicionarImoveis(Imovel imovel){
+        catalogoImoveis.add(imovel);
     }
+
+    //Adicionar Funcionários
+    public void adicionarFuncionario(Funcionario funcionario){
+        listaFuncionarios.add(funcionario);
+    }
+
+    //Exibir dados Imobiliaria
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("====Imobiliaria " + getNomeImobiliaria() + "====");
+        retorno.append("\nFuncionários:  " + getListaFuncionarios());
+        retorno.append("\nCatálogo de Imoveis: " + getCatalogoImoveis());
+        return retorno.toString();
+    }
+
 }

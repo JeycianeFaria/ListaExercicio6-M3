@@ -83,11 +83,12 @@ public class Imovel {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Imovel: " + getNomeImovel());
+        retorno.append("\nImovel: " + getNomeImovel());
         retorno.append("\nEndereço: " + getEnderecoImovel() + ".");
         retorno.append("\nValor Aluguel: R$ " + getValorAluguel());
         retorno.append("\nResponsável: " + getFuncionarioResponsavel());
         retorno.append("\nMoradores: " + listaMoradores);
+        retorno.append("\n-------------------------------------");
         return retorno.toString();
     }
 
